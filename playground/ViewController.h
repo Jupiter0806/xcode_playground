@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "JSONParser.h"
+
 @interface ViewController : UIViewController
 
+- (IBAction) JSONParser_parse:(id)sender;
+- (IBAction) JSONParser_getInt:(id)sender;
+- (IBAction) JSONParser_getString:(id)sender;
 
 @end
 

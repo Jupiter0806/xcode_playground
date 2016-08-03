@@ -8,6 +8,11 @@
 
 #import "ViewController.h"
 
+@interface ViewController() {
+}
+
+@end
+
 @interface ViewController ()
 
 @end
@@ -22,6 +27,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) JSONParser_parse:(id)sender {
+    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
+    
+    JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
+}
+
+- (IBAction) JSONParser_getInt:(id)sender {
+    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
+    
+    JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
+    
+    NSLog(@"int value is %d", [parser getIntegerValueOfKey:@"int"]);
+}
+- (IBAction) JSONParser_getString:(id)sender {
+    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
+    
+    JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
+    
+    NSLog(@"string value is %@", [parser getStringValueOfKey:@"string"]);
 }
 
 @end
