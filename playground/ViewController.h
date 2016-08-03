@@ -15,6 +15,7 @@
 - (IBAction) JSONParser_parse:(id)sender;
 - (IBAction) JSONParser_getInt:(id)sender;
 - (IBAction) JSONParser_getString:(id)sender;
+- (IBAction) JSONParser_getArray:(id)sender;
 
 @end
 

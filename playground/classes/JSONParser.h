@@ -15,6 +15,7 @@
 - (id) initWithJSONStr: (NSString *)json_str;
 
 - (int) getIntegerValueOfKey: (NSString *)key;
-- (NSString *) getStringValueOfKey : (NSString *)key;
+- (NSString *) getStringValueOfKey: (NSString *)key;
+- (NSArray *) getArrayValueOfKey: (NSString *)key;
 
 @end

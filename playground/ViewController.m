@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController() {
+    NSString *json_str;
 }
 
 @end
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    json_str = @"{\"int\":10, \"string\":\"abc\", \"array\":[{\"int\":15},{\"int\":25}]}";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,24 +32,23 @@
 }
 
 - (IBAction) JSONParser_parse:(id)sender {
-    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
-    
     JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
 }
 
 - (IBAction) JSONParser_getInt:(id)sender {
-    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
-    
     JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
     
     NSLog(@"int value is %d", [parser getIntegerValueOfKey:@"int"]);
 }
 - (IBAction) JSONParser_getString:(id)sender {
-    NSString *json_str = @"{\"int\":10, \"string\":\"abc\"}";
-    
     JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
     
     NSLog(@"string value is %@", [parser getStringValueOfKey:@"string"]);
+}
+- (IBAction) JSONParser_getArray:(id)sender {
+    JSONParser *parser = [[JSONParser alloc] initWithJSONStr:json_str];
+
+    NSArray *array = [parser getArrayValueOfKey:@"array"];
 }
 
 @end

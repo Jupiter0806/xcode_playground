@@ -57,5 +57,8 @@
 - (NSString *) getStringValueOfKey : (NSString *)key {
     return [res objectForKey:key];
 }
+- (NSArray *) getArrayValueOfKey: (NSString *)key {
+    return [res objectForKey:key];
+}
 
 @end

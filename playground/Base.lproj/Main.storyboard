@@ -44,6 +44,13 @@
                                     <action selector="JSONParser_getString:" destination="BYZ-38-t0r" eventType="touchDown" id="L0L-yI-lDW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="494-eG-CWb">
+                                <rect key="frame" x="20" y="77" width="90" height="30"/>
+                                <state key="normal" title="Array"/>
+                                <connections>
+                                    <action selector="JSONParser_getArray:" destination="BYZ-38-t0r" eventType="touchDown" id="8u2-Ux-mf8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
